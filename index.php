@@ -8,6 +8,7 @@
   <head>
   <body>
       <h1>(Online Store Name)</h1>
+      <button><a href="user.php">Log In</a></button>
       <hr />
       <p> Copyright &copy; 2017 Bailey Nottingham and Scott Perry.</p>
   </body>

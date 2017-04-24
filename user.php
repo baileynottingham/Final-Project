@@ -12,6 +12,7 @@
     <br />
     Password: <input type="password" name="name" required="required" />
     <br />
+    <br />
     <input type="submit" value="Log in" />
   </form>
   <form id="register" action="register.php" method="post">

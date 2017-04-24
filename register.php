@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Register</h1>
-  <form id="newAccount" action="">
+  <form id="newAccount" action="index.php" method="post">
     First Name: <input type="text" name="firstName" required="required" />
     <br />
     <br />

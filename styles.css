@@ -1,3 +1,7 @@
 /*
 * Style Sheet - Bailey Nottingham & Scott Perry
 */
+
+#incorrectPassword {
+  color: red;
+}

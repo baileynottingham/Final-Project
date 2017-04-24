@@ -1,5 +1,7 @@
 <!-- Index Page -->
 <!-- This whill contain all our products of images and buttons below them that we can add them to cart -->
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,17 +9,14 @@
     <link href="styles.css" type="text/css" rel="stylesheet" />
   <head>
   <body>
-      <h1>We got Balls Sporting Goods</h1>
+      <h1>We Got Balls! Sporting Goods</h1>
       <?php
-      session_start();
-      session_destroy();
-    //  echo $_SESSION["firstName"];
         if(isset($_SESSION['firstName']) && isset($_SESSION['lastName']) && isset($_SESSION['email'])) {
       ?>
-      <p>Welcome Back, <?= $_SESSION["firstName"] ?> <?= $_SESSION["lastName"] ?> </p>
+      <p>Welcome back, <?= $_SESSION["firstName"] ?> <?= $_SESSION["lastName"] ?> </p>
       <form id="logout" action="index.php" method="post"/>
-        <input type="submit" value="Log Out" />
         <input type="hidden" name="logout" value="true" />
+        <input type="submit" value="Log Out" />
       </form>
       <?php
         }

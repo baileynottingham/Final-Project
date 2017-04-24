@@ -20,6 +20,7 @@
     Password: <input type="password" name="password" required="required" />
     <br />
     <br />
+    <input type="hidden" name="newUser" />
     <input type="submit" />
   </form>
 </body>

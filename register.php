@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link href="styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Register</h1>
+  <form id="newAccount" action="">
+    First Name: <input type="text" name="firstName" required="required" />
+    <br />
+    <br />
+    Last Name: <input type="text" name="lastName" required="required" />
+    <br />
+    <br />
+    Email: <input type="text" name="email" required="required" />
+    <br />
+    <br />
+    Password: <input type="password" name="password" required="required" />
+    <br />
+    <br />
+    <input type="submit" />
+  </form>
+</body>
+<html>

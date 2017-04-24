@@ -10,7 +10,7 @@
       <h1>We got Balls Sporting Goods</h1>
       <?php
       session_start();
-      echo $_SESSION["firstName"];
+    //  echo $_SESSION["firstName"];
         if(isset($_SESSION['firstName']) && isset($_SESSION['lastName']) && isset($_SESSION['email'])) {
       ?>
       <p>Welcome Back, <?= $_SESSION["firstName"] ?> <?= $_SESSION["lastName"] ?> </p>

@@ -22,25 +22,6 @@
       $data->execute();
     }
 
-/*    public function addQuote($quote, $author) {
-      $stmt = $this->DB->prepare ( "SELECT * FROM  quotes ORDER BY quote_ID DESC");
-      $stmt->execute();
-      $stmt = $stmt->fetchAll ( PDO::FETCH_ASSOC );
-      $quote_id = $stmt[0]['quote_ID'];
-      (int)$quote_id = $quote_id + 1;
-      $stmt2 = $this->DB->prepare ( "SELECT * FROM  quotes ORDER BY author_id DESC" );
-      $stmt2->execute();
-      $stmt2 = $stmt2->fetchAll ( PDO::FETCH_ASSOC );
-      $author_id = $stmt[0]['author_id'];
-      $author_id = $author_id + 1;
-      $temp = $this->DB->prepare("INSERT INTO quotes (quote, author_id, quote_ID) VALUES ('$quote', $author_id, $quote_id)");
-      $temp->bindParam( 'quote', $quote);
-      $temp->execute();
-      $temp2 = $this->DB->prepare("INSERT INTO authors VALUES('$author', $author_id)");
-      $temp->bindParam( 'quote', $author);
-      $temp2->execute();
-    }
-*/
       // Return all quotations records as an associative array.
 //      public function getQuotesAsArray() {
 //        $stmt = $this->DB->prepare ( "SELECT * FROM  quotes ORDER BY rank DESC, date DESC");

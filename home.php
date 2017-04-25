@@ -30,18 +30,25 @@
       <br />
       <br />
       <img src="soccer.JPEG" alt="Soccer Ball">
+      <button id="soccer">Add to Cart!</button>
       <br />
       <img src="basketball.JPEG" alt="Basketball">
+      <button id="basketball">Add to Cart!</button>
       <br />
       <img src="football.png" alt="Football">
+      <button id="football">Add to Cart!</button>
       <br />
       <img src="golfball.JPEG" alt="Golf Ball">
+      <button id="golfball">Add to Cart!</button>
       <br />
       <img src="hockey.JPEG" alt="Hockey Puck">
+      <button id="hockey">Add to Cart!</button>
       <br />
       <img src="tennis.JPEG" alt="Tennis Ball">
+      <button id="tennis">Add to Cart!</button>
       <br />
       <img src="baseball.JPEG" alt="Baseball">
+      <button id="baseball">Add to Cart!</button>
       <hr />
       <p> Copyright &copy; 2017 Bailey Nottingham and Scott Perry.</p>
   </body>

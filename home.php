@@ -27,6 +27,21 @@
       <?php
         }
       ?>
+      <br />
+      <br />
+      <img src="soccer.JPEG" alt="Soccer Ball">
+      <br />
+      <img src="basketball.JPEG" alt="Basketball">
+      <br />
+      <img src="football.png" alt="Football">
+      <br />
+      <img src="golfball.JPEG" alt="Golf Ball">
+      <br />
+      <img src="hockey.JPEG" alt="Hockey Puck">
+      <br />
+      <img src="tennis.JPEG" alt="Tennis Ball">
+      <br />
+      <img src="baseball.JPEG" alt="Baseball">
       <hr />
       <p> Copyright &copy; 2017 Bailey Nottingham and Scott Perry.</p>
   </body>

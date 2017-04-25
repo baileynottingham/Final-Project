@@ -14,7 +14,7 @@
     Last Name: <input type="text" name="lastName" required="required" />
     <br />
     <br />
-    Email: <input type="text" name="email" required="required" />
+    Email: <input id="user" type="text" name="email" required="required" />
     <br />
     <br />
     Password: <input type="password" name="password" required="required" />

@@ -1,3 +1,4 @@
+//frame for AJAX to check the username
 window.onload = function(){
     $("user").onchange = userCheck;
 }
@@ -11,5 +12,5 @@ function userCheck(){
 }
 
 function checkDB(ajax){
-    ajax.responseText;
+    $userName = $("user").value;
 }

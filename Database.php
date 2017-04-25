@@ -38,6 +38,15 @@
         return FALSE;
       }
     }
+    //following is untested and might not work
+    public function validUser($userName){
+      $stmt = $this->DB->prepare ( "SELECT * FROM accounts WHERE email = '$userName'");
+      $stmt->execute();
+      $stmt = $stmt->fetchAll( PDO::FETCH_ASSOC );
+      if($stmt.length == 0)
+        return true;
+      return false;
+    }
 
       // Return all quotations records as an associative array.
 //      public function getQuotesAsArray() {

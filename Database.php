@@ -49,23 +49,9 @@
       return "false";      
     }
 
-      // Return all quotations records as an associative array.
-//      public function getQuotesAsArray() {
-//        $stmt = $this->DB->prepare ( "SELECT * FROM  quotes ORDER BY rank DESC, date DESC");
-//        $stmt->execute();
-//        return $stmt->fetchAll ( PDO::FETCH_ASSOC );
-//      }
-  }
-
-  
-  // Test code can only be used temporarily here.
   $myDatabaseFunctions = new DatabaseAdaptor();
-//  $array = $myDatabaseFunctions->getQuotesAsArray();
-//  foreach ( $array as $record ) {
-//    echo $record ['author_id'] . ' ' . $record ['rank'] . ' ' . $record ['quote'] . PHP_EOL;
-//  }
-
-if (isset($_POST['name'])){
+  
+  if (isset($_POST['name'])){
     echo $myDatabaseFunctions->validUser($_POST['name']);
   }
 ?>

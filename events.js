@@ -4,7 +4,6 @@ window.onload = function(){
 }
 
 function userCheck(){
-    console.log("here");
     if ($("user").value){
         new Ajax.Request("Database.php",
             {
@@ -19,7 +18,6 @@ function userCheck(){
 }
 
 function ajaxSuccess(ajax){
-    console.log(ajax.responseText);
     if (ajax.responseText == "false"){
         $("submit").disabled = true;
         $("status").textContent = "Username is already in use!";

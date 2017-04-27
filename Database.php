@@ -40,12 +40,13 @@
     }
     //following is untested and might not work
     public function validUser($userName){
-      $stmt = $this->DB->prepare ( "SELECT * FROM accounts WHERE email = '$userName'");
+      $stmt = $this->DB->prepare ( "SELECT email FROM accounts WHERE email = :user ;");
+      $stmt->bindParam('user', $userName);
       $stmt->execute();
-      $stmt = $stmt->fetchAll( PDO::FETCH_ASSOC );
-      if($stmt.length == 0)
-        return true;
-      return false;
+      $row = $stmt->fetchAll( PDO::FETCH_ASSOC );
+      if (count($row) == 0)
+        return "true";
+      return "false";      
     }
 
       // Return all quotations records as an associative array.
@@ -55,9 +56,16 @@
 //        return $stmt->fetchAll ( PDO::FETCH_ASSOC );
 //      }
   }
+
+  
   // Test code can only be used temporarily here.
   $myDatabaseFunctions = new DatabaseAdaptor();
 //  $array = $myDatabaseFunctions->getQuotesAsArray();
 //  foreach ( $array as $record ) {
 //    echo $record ['author_id'] . ' ' . $record ['rank'] . ' ' . $record ['quote'] . PHP_EOL;
 //  }
+
+if (isset($_POST['name'])){
+    echo $myDatabaseFunctions->validUser($_POST['name']);
+  }
+?>

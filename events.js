@@ -4,13 +4,27 @@ window.onload = function(){
 }
 
 function userCheck(){
-    new Ajax.Request("register.php",
-        {
-            onSuccess: checkDB
-        }
-    )
+    console.log("here");
+    if ($("user").value){
+        new Ajax.Request("Database.php",
+            {
+                onSuccess: ajaxSuccess,
+                parameters:
+                {
+                name: $("user").value
+                }
+            }
+        )
+    }
 }
 
-function checkDB(ajax){
-    $userName = $("user").value;
+function ajaxSuccess(ajax){
+    console.log(ajax.responseText);
+    if (ajax.responseText == "false"){
+        $("submit").disabled = true;
+        $("status").textContent = "Username is already in use!";
+    } else{
+        $("submit").disabled = false;
+        $("status").textContent = "";
+    }
 }

@@ -4,6 +4,8 @@
 <head>
   <title>Register</title>
   <link href="styles.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="./prototype.js"> </script>
+  <script type="text/javascript" src="./events.js"> </script>
 </head>
 <body>
   <h1>Register</h1>
@@ -21,7 +23,9 @@
     <br />
     <br />
     <input type="hidden" name="newUser" />
-    <input type="submit" />
+    <input id="submit" type="submit" />
+    <br />
+    <p id="status"></p>
   </form>
 </body>
 <html>

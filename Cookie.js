@@ -9,40 +9,40 @@
  *
  * This is a helper library for manipulating cookies in JavaScript.
  * It provides the following public functions:
- * 
+ *
  * ============================================================================
  * void Cookie.clear()
  * removes all cookies on the current page
- * 
+ *
  * boolean Cookie.exists(string name)
  * returns true if you have set a cookie with the given name, otherwise false
- * 
+ *
  * string Cookie.get(string name)
  * returns the value for the cookie with the given name (null if not found)
- * 
+ *
  * void Cookie.remember(HTMLElement element, string cookieName)
  * Remembers the given element (checkbox, radio button, select, text box) state
  * using the given cookie name.  If the client returns to the page, the element
  * will restore its state.  If cookieName is omitted, chosen automatically.
- * 
+ *
  * void Cookie.remove(string name)
  * deletes the cookie with the given name, if it exists
- * 
+ *
  * void Cookie.set(string name, string value)
  * sets a cookie for the given name, replacing any prior value
- * 
+ *
  * array Cookie.toArray()
  * returns all cookies on current page as an associative [name => value] array
- * 
+ *
  * array Cookie.toArrayNames()
  * returns all cookie names on current page as a standard 0-based indexed array
  * ============================================================================
- * 
+ *
  * This library passes the JSHint code analyzer (jshint.com) and, depending on
  * flags used, also passes the stricter JSLint analyzer (jslint.com).
  *
  * This software is licensed for use under the MIT license:
- * 
+ *
  * Open Source Initiative OSI - The MIT License (MIT):Licensing
  *
  * The MIT License (MIT)
@@ -57,7 +57,7 @@
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -74,10 +74,10 @@ if (typeof(Cookie) === "undefined") {
 
 (function () {
     "use strict";
-    
+
     // avoid re-loading same library twice
     if (typeof(Cookie) === "function" && typeof(Cookie.LOADED) !== "undefined") { return; }
- 
+
     // library constants
     Cookie.AUTO_REMEMBER_STATEFUL = true;         // auto-remember elements with class 'stateful'
     Cookie.DEFAULT_EXPIRATION = 30;               // default of 30 days till cookie expires
@@ -126,7 +126,7 @@ if (typeof(Cookie) === "undefined") {
         }
     };
 
-    /** 
+    /**
      * Turns the given HTML DOM element into one that will remember its
      * state (value, checked-ness, etc.), using a cookie with the given name.
      * If the client returns to this page later, the element will restore its state.
@@ -158,10 +158,10 @@ if (typeof(Cookie) === "undefined") {
             // already remembered by this cookie name; no need to repeat
             return;
         }
-        
+
         var tag = element.tagName.toLowerCase();
         var type = element.type;
-        
+
         if (tag === "select" || tag === "textarea" || tag === "datalist" ||
                 (tag === "input" && (!type || Cookie.SUPPORTED_INPUT_TYPES[type]))) {
             // text box (single or multi line), or select box (must remember 'value' property)
@@ -203,7 +203,7 @@ if (typeof(Cookie) === "undefined") {
         }
         document.cookie = name + "=" + value + expires + "; path=" + path;
     };
-    
+
     /** Returns all cookies on current page as an associative [name => value] array. */
     Cookie.toArray = function () {
         var hash = {};
@@ -216,7 +216,7 @@ if (typeof(Cookie) === "undefined") {
         }
         return hash;
     };
-    
+
     /** Returns all cookie -names- on current page as a standard 0-based-indexed array. */
     Cookie.toArrayNames = function () {
         var a = [];
@@ -230,14 +230,14 @@ if (typeof(Cookie) === "undefined") {
         }
         return a;
     };
-    
-    
+
+
     // * BEGIN UNDOCUMENTED PRIVATE FUNCTIONS *
     // The functions below are internal functions used to implement the public API above.
     // They should not be called directly by clients.
     // Since they are not published public API, we do not guarantee that they will
     // remain in future versions of this library.  Do not call or depend on these below.
-    
+
     /** Helper for adding an event listener to a DOM element. */
     Cookie.addEventListener = function (element, event, fn) {
         if (!event) {
@@ -298,7 +298,7 @@ if (typeof(Cookie) === "undefined") {
     Cookie.makeStatefulCheckbox = function (element, cookieName, expiration) {
         Cookie.makeStatefulHelper(element, cookieName, expiration, Cookie.statefulCheckboxChange);
     };
-    
+
     /** Turns the given radio button into one that will remember its checked-ness,
      *  using a client-side cookie with the given name.
      *  Will also uncheck other radio buttons in the same name group.
@@ -316,7 +316,7 @@ if (typeof(Cookie) === "undefined") {
             Cookie.makeStatefulHelper(element, cookieName, expiration, Cookie.statefulCheckboxChange);
         }
     };
-    
+
     /** Turns the given select box into one that will remember its selected value,
      *  using a client-side cookie with the given name.
      */
@@ -344,7 +344,7 @@ if (typeof(Cookie) === "undefined") {
      *  (identical implementation code to makeStatefulSelect)
      */
     Cookie.makeStatefulTextBox = Cookie.makeStatefulSelect;
-    
+
     // private helper to capture common code between check box and radio button
     Cookie.makeStatefulHelper =  function (element, cookieName, expiration, handler) {
         element = Cookie.resolveElement(element);
@@ -370,7 +370,7 @@ if (typeof(Cookie) === "undefined") {
         });
         element.remembered = true;
     };
-    
+
     /** This function is called when a "stateful" checkbox's checked state
      *  changes, and stores that state in a cookie to be restored later.
      */
@@ -391,7 +391,7 @@ if (typeof(Cookie) === "undefined") {
         }
         element = Cookie.resolveElement(element);
         cookieName = Cookie.resolveName(element, cookieName);
-        
+
         // also set all cookies for all other radio buttons in this button's group
         if (element.checked) {
             Cookie.set(cookieName, element.value, expiration);
@@ -447,7 +447,7 @@ if (typeof(Cookie) === "undefined") {
     Cookie.resolveName = function (element, cookieName) {
         if (cookieName) {
             return cookieName;
-        } 
+        }
         element = Cookie.resolveElement(element);
         if (element.type === "radio" && element.name) {
             // use form query parameter name for radio buttons
@@ -462,7 +462,7 @@ if (typeof(Cookie) === "undefined") {
             throw "Cookie.js: cannot resolve a valid cookie name for HTML DOM element: " + element;
         }
     };
-    
+
     /**
      * Automatically attaches listeners to all elements on the page with class 'remember'.
      * A convenience so that you can use the library without having to write any of your own JS code.
@@ -485,11 +485,119 @@ if (typeof(Cookie) === "undefined") {
             }
         }
     };
-    
+
     Cookie.LOADED = true;
-    
+
     // 'main' method to handle window.onload
     if (Cookie.AUTO_REMEMBER_STATEFUL) {
         Cookie.addEventListener(window, "load", Cookie.rememberAllStateful);
     }
 })();
+
+window.onload = function(){
+    $("soccerButton").onclick = incrementItem1;
+    $("basketballButton").onclick = incrementItem2;
+    $("footballButton").onclick = incrementItem3;
+    $("golfballButton").onclick = incrementItem4;
+    $("hockeyButton").onclick = incrementItem5;
+    $("tennisButton").onclick = incrementItem6;
+    $("baseballButton").onclick = incrementItem7;
+}
+
+function incrementItem1() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item1") == false) {
+      Cookie.set("item1", "0", 30);
+    }
+    var num = Cookie.get("item1");
+    num++;
+    Cookie.set("item1", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}
+
+function incrementItem2() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item2") == false) {
+      Cookie.set("item2", "0", 30);
+    }
+    var num = Cookie.get("item2");
+    num++;
+    Cookie.set("item2", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}
+
+function incrementItem3() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item3") == false) {
+      Cookie.set("item3", "0", 30);
+    }
+    var num = Cookie.get("item3");
+    num++;
+    Cookie.set("item3", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}
+
+function incrementItem4() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item4") == false) {
+      Cookie.set("item4", "0", 30);
+    }
+    var num = Cookie.get("item4");
+    num++;
+    Cookie.set("item4", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}
+
+function incrementItem5() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item5") == false) {
+      Cookie.set("item5", "0", 30);
+    }
+    var num = Cookie.get("item5");
+    num++;
+    Cookie.set("item5", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}
+
+function incrementItem6() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item6") == false) {
+      Cookie.set("item6", "0", 30);
+    }
+    var num = Cookie.get("item6");
+    num++;
+    Cookie.set("item6", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}
+
+function incrementItem7() {
+  if(Cookie.exists("firstName") == true) {
+    if(Cookie.exists("item7") == false) {
+      Cookie.set("item7", "0", 30);
+    }
+    var num = Cookie.get("item7");
+    num++;
+    Cookie.set("item7", num, 30);
+  }
+  else {
+    alert("Please log in to start adding items to your cart!");
+  }
+}

@@ -46,12 +46,14 @@
       $row = $stmt->fetchAll( PDO::FETCH_ASSOC );
       if (count($row) == 0)
         return "true";
-      return "false";      
+      return "false";
     }
+  }  
 
   $myDatabaseFunctions = new DatabaseAdaptor();
-  
+
   if (isset($_POST['name'])){
     echo $myDatabaseFunctions->validUser($_POST['name']);
   }
+
 ?>

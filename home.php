@@ -7,6 +7,8 @@
   <head>
     <title>Online Store</title>
     <link href="styles.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="Cookie.js"></script>
+    <script type="text/javascript" src="prototype.js"></script>
   <head>
   <body>
       <h1>We Got Balls! Sporting Goods</h1>
@@ -30,39 +32,25 @@
       <br />
       <br />
       <img src="soccer.JPEG" alt="Soccer Ball">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="soccerButton">Add to Cart!</button>
       <br />
       <img src="basketball.JPEG" alt="Basketball">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="basketballButton">Add to Cart!</button>
       <br />
       <img src="football.png" alt="Football">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="footballButton">Add to Cart!</button>
       <br />
       <img src="golfball.JPEG" alt="Golf Ball">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="golfballButton">Add to Cart!</button>
       <br />
       <img src="hockey.JPEG" alt="Hockey Puck">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="hockeyButton">Add to Cart!</button>
       <br />
       <img src="tennis.JPEG" alt="Tennis Ball">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="tennisButton">Add to Cart!</button>
       <br />
       <img src="baseball.JPEG" alt="Baseball">
-      <form>
-        <input type="submit" value="Add to Cart!"/>
-      </form>
+      <button id="baseballButton">Add to Cart!</button>
       <hr />
       <p> Copyright &copy; 2017 Bailey Nottingham and Scott Perry.</p>
   </body>

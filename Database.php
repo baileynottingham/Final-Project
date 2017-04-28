@@ -21,12 +21,23 @@
       $data = $this->DB->prepare("INSERT INTO accounts (email, firstName, lastName, password) VALUES ('$email', '$firstName', '$lastName', '$hashed_pwd')");
       $data->execute();
     }
+    public function firstName($email) {
+      $data = $this->DB->prepare("SELECT * FROM accounts WHERE email = '$email'");
+      $data->execute();
+      $data = $data->fetchAll( PDO::FETCH_ASSOC );
+      return $data[0]['firstName'];
+    }
+    public function lastName($email) {
+      $data = $this->DB->prepare("SELECT * FROM accounts WHERE email = '$email'");
+      $data->execute();
+      $data = $data->fetchAll( PDO::FETCH_ASSOC );
+      return $data[0]['lastName'];
+    }
     public function logIn($email, $password) {
       $data = $this->DB->prepare("SELECT * FROM accounts WHERE email = '$email'");
       $data->execute();
       $data = $data->fetchAll( PDO::FETCH_ASSOC );
       if(password_verify($password, $data[0]['password']) == 1) {
-        session_start();
         $_SESSION['firstName'] = $data[0]['firstName'];
         $_SESSION['lastName'] = $data[0]['lastName'];
         $_SESSION['email'] = $data[0]['email'];
@@ -48,7 +59,7 @@
         return "true";
       return "false";
     }
-  }  
+  }
 
   $myDatabaseFunctions = new DatabaseAdaptor();
 

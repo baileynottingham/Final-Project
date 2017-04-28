@@ -1,6 +1,6 @@
 <!-- Index Page -->
 <!-- This whill contain all our products of images and buttons below them that we can add them to cart -->
-<?php session_start(); ?>
+<?php session_start() ?>
 
 <!DOCTYPE html>
 <html>
@@ -51,12 +51,12 @@
       <button id="soccerButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="soccerButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       <img src="basketball.JPEG" alt="Basketball">
       Quantity:
-      <select id="basektballList">
+      <select id="basketballList">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -72,7 +72,7 @@
       <button id="basketballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="basketballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       <img src="football.png" alt="Football">
@@ -93,7 +93,7 @@
       <button id="footballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="footballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       <img src="golfball.JPEG" alt="Golf Ball">
@@ -114,7 +114,7 @@
       <button id="golfballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="golfballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       <img src="hockey.JPEG" alt="Hockey Puck">
@@ -135,7 +135,7 @@
       <button id="hockeyButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="hockeyButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       <img src="tennis.JPEG" alt="Tennis Ball">
@@ -156,7 +156,7 @@
       <button id="tennisButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="tennisButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       <img src="baseball.JPEG" alt="Baseball">
@@ -177,7 +177,7 @@
       <button id="baseballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled">Sign in to start adding items to your cart!</button>
+      <button disabled="disbaled" id="baseballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <hr />
       <p> Copyright &copy; 2017 Bailey Nottingham and Scott Perry.</p>

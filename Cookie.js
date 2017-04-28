@@ -505,99 +505,92 @@ window.onload = function(){
 }
 
 function incrementItem1() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item1") == false) {
-      Cookie.set("item1", "0", 30);
-    }
-    var num = Cookie.get("item1");
-    num++;
-    Cookie.set("item1", num, 30);
+  if(Cookie.exists("item1") == false) {
+    Cookie.set("item1", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("soccerList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item1");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item1", num, 30);
 }
 
 function incrementItem2() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item2") == false) {
-      Cookie.set("item2", "0", 30);
-    }
-    var num = Cookie.get("item2");
-    num++;
-    Cookie.set("item2", num, 30);
+  if(Cookie.exists("item2") == false) {
+    Cookie.set("item2", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("basketballList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item2");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item2", num, 30);
 }
 
 function incrementItem3() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item3") == false) {
-      Cookie.set("item3", "0", 30);
-    }
-    var num = Cookie.get("item3");
-    num++;
-    Cookie.set("item3", num, 30);
+  if(Cookie.exists("item3") == false) {
+    Cookie.set("item3", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("footballList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item3");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item3", num, 30);
 }
 
 function incrementItem4() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item4") == false) {
-      Cookie.set("item4", "0", 30);
-    }
-    var num = Cookie.get("item4");
-    num++;
-    Cookie.set("item4", num, 30);
+  if(Cookie.exists("item4") == false) {
+    Cookie.set("item4", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("golfballList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item4");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item4", num, 30);
 }
 
 function incrementItem5() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item5") == false) {
-      Cookie.set("item5", "0", 30);
-    }
-    var num = Cookie.get("item5");
-    num++;
-    Cookie.set("item5", num, 30);
+  if(Cookie.exists("item5") == false) {
+    Cookie.set("item5", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("hockeyList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item5");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item5", num, 30);
 }
 
 function incrementItem6() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item6") == false) {
-      Cookie.set("item6", "0", 30);
-    }
-    var num = Cookie.get("item6");
-    num++;
-    Cookie.set("item6", num, 30);
+  if(Cookie.exists("item6") == false) {
+    Cookie.set("item6", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("tennisList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item6");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item6", num, 30);
 }
 
 function incrementItem7() {
-  if(Cookie.exists("firstName") == true) {
-    if(Cookie.exists("item7") == false) {
-      Cookie.set("item7", "0", 30);
-    }
-    var num = Cookie.get("item7");
-    num++;
-    Cookie.set("item7", num, 30);
+  if(Cookie.exists("item7") == false) {
+    Cookie.set("item7", "0");
   }
-  else {
-    alert("Please log in to start adding items to your cart!");
-  }
+  var box = $("baseballList");
+  var increment = box.options[box.selectedIndex].value;
+  increment = parseInt(increment);
+  var num = Cookie.get("item7");
+  num = parseInt(num);
+  num = num + increment;
+  Cookie.set("item7", num, 30);
 }

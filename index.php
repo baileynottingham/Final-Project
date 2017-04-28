@@ -2,7 +2,7 @@
 
 
   if(isset($_POST["newUser"])) {
-    session_start();
+  //  session_start();
     $_SESSION['firstName'] = $_POST['firstName'];
     $_SESSION['lastName'] = $_POST['lastName'];
     $_SESSION['email'] = $_POST['email'];

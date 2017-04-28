@@ -22,6 +22,11 @@
         <input type="hidden" name="logout" value="true" />
         <input type="submit" value="Log Out" />
       </form>
+      <form id="cart" action="cart.php" method="post"/>
+        <input type="hidden" name="cart" value="true" />
+        <input type="submit" value="View Shopping Cart" />
+      </form>
+      <p id="total">Total Items in Cart: </p>
       <?php
         }
         else {

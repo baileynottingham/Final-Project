@@ -502,6 +502,7 @@ window.onload = function(){
     $("hockeyButton").onclick = incrementItem5;
     $("tennisButton").onclick = incrementItem6;
     $("baseballButton").onclick = incrementItem7;
+    totalItemsInCart();
 }
 
 function incrementItem1() {
@@ -515,6 +516,7 @@ function incrementItem1() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item1", num, 30);
+  totalItemsInCart();
 }
 
 function incrementItem2() {
@@ -528,6 +530,7 @@ function incrementItem2() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item2", num, 30);
+  totalItemsInCart();
 }
 
 function incrementItem3() {
@@ -541,6 +544,7 @@ function incrementItem3() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item3", num, 30);
+  totalItemsInCart();
 }
 
 function incrementItem4() {
@@ -554,6 +558,7 @@ function incrementItem4() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item4", num, 30);
+  totalItemsInCart();
 }
 
 function incrementItem5() {
@@ -567,6 +572,7 @@ function incrementItem5() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item5", num, 30);
+  totalItemsInCart();
 }
 
 function incrementItem6() {
@@ -580,6 +586,7 @@ function incrementItem6() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item6", num, 30);
+  totalItemsInCart();
 }
 
 function incrementItem7() {
@@ -593,4 +600,31 @@ function incrementItem7() {
   num = parseInt(num);
   num = num + increment;
   Cookie.set("item7", num, 30);
+  totalItemsInCart();
 }
+  function totalItemsInCart() {
+    var total = 0;
+    if(Cookie.exists("item1") == true) {
+      total = total + parseInt(Cookie.get("item1"));
+    }
+    if(Cookie.exists("item2") == true) {
+      total = total + parseInt(Cookie.get("item2"));
+    }
+    if(Cookie.exists("item3") == true) {
+      total = total + parseInt(Cookie.get("item3"));
+    }
+    if(Cookie.exists("item4") == true) {
+      total = total + parseInt(Cookie.get("item4"));
+    }
+    if(Cookie.exists("item5") == true) {
+      total = total + parseInt(Cookie.get("item5"));
+    }
+    if(Cookie.exists("item6") == true) {
+      total = total + parseInt(Cookie.get("item6"));
+    }
+    if(Cookie.exists("item7") == true) {
+      total = total + parseInt(Cookie.get("item7"));
+    }
+    $("total").innerHTML = "Total Items in Cart: " + total;
+    Cookie.set("totalItems", total, 30);
+  }

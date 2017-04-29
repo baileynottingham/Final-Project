@@ -102,6 +102,31 @@
   </form>
   <hr />
   <?php } ?>
+  <?php
+  $total = 0;
+  if(isset($_COOKIE["item1"]) == true) {
+    $total = $total + ($_COOKIE["item1"] * 19.95);
+  }
+  if(isset($_COOKIE["item2"]) == true) {
+    $total = $total + ($_COOKIE["item2"] * 25.00);
+  }
+  if(isset($_COOKIE["item3"]) == true) {
+    $total = $total + ($_COOKIE["item3"] * 21.25);
+  }
+  if(isset($_COOKIE["item4"]) == true) {
+    $total = $total + ($_COOKIE["item4"] * 3.50);
+  }
+  if(isset($_COOKIE["item5"]) == true) {
+    $total = $total + ($_COOKIE["item5"] * 12.75);
+  }
+  if(isset($_COOKIE["item6"]) == true) {
+    $total = $total + ($_COOKIE["item6"] * 3.00);
+  }
+  if(isset($_COOKIE["item7"]) == true) {
+    $total = $total + ($_COOKIE["item7"] * 4.10);
+  }
+  ?>
+  <p>Subtotal (<?=$_COOKIE["totalItems"]?> items): $<?=number_format($total, 2)?></p>
   <?php } ?>
 </body>
 </html>

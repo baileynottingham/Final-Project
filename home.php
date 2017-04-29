@@ -39,6 +39,7 @@
       <br />
       <br />
       <img src="soccer.JPEG" alt="Soccer Ball">
+      <p>Price $19.95</p>
       Quantity:
       <select id="soccerList">
         <option value="1">1</option>
@@ -60,6 +61,7 @@
       <?php } ?>
       <br />
       <img src="basketball.JPEG" alt="Basketball">
+      <p>Price $25.00</p>
       Quantity:
       <select id="basketballList">
         <option value="1">1</option>
@@ -81,6 +83,7 @@
       <?php } ?>
       <br />
       <img src="football.png" alt="Football">
+      <p>Price $21.25</p>
       Quantity:
       <select id="footballList">
         <option value="1">1</option>
@@ -102,6 +105,7 @@
       <?php } ?>
       <br />
       <img src="golfball.JPEG" alt="Golf Ball">
+      <p>Price $3.50</p>
       Quantity:
       <select id="golfballList">
         <option value="1">1</option>
@@ -123,6 +127,7 @@
       <?php } ?>
       <br />
       <img src="hockey.JPEG" alt="Hockey Puck">
+      <p>Price $12.75</p>
       Quantity:
       <select id="hockeyList">
         <option value="1">1</option>
@@ -144,6 +149,7 @@
       <?php } ?>
       <br />
       <img src="tennis.JPEG" alt="Tennis Ball">
+      <p>Price $3.00</p>
       Quantity:
       <select id="tennisList">
         <option value="1">1</option>
@@ -165,6 +171,7 @@
       <?php } ?>
       <br />
       <img src="baseball.JPEG" alt="Baseball">
+      <p>Price $4.10</p>
       Quantity:
       <select id="baseballList">
         <option value="1">1</option>

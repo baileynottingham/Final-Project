@@ -127,6 +127,9 @@
   }
   ?>
   <p>Subtotal (<?=$_COOKIE["totalItems"]?> items): $<?=number_format($total, 2)?></p>
+  <form action="checkout.php">
+    <input type="submit" value="Check Out!" />
+  </form>
   <?php } ?>
 </body>
 </html>

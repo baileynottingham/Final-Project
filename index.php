@@ -32,6 +32,44 @@
     session_regenerate_id(TRUE);
     header("Location: ./index.php");
   }
+  else if(isset($_POST["remove"])) {
+    if(isset($_POST["item1"])) {
+      $temp = (int)$_COOKIE['totalItems'] - (int)$_COOKIE['item1'];
+      setcookie('totalItems', $temp,'/');
+      setcookie('item1', '0', 30, '/');
+    }
+    if(isset($_POST["item2"])) {
+      $temp = $_COOKIE['totalItems'] - $_COOKIE['item2'];
+      setcookie('totalItems', $temp,'/');
+      setcookie('item2', '0', 30, '/');
+    }
+    if(isset($_POST["item3"])) {
+      $temp = $_COOKIE['totalItems'] - $_COOKIE['item3'];
+      setcookie('totalItems', $temp, '/');
+      setcookie('item3', '0', 30, '/');
+    }
+    if(isset($_POST["item4"])) {
+      $temp = $_COOKIE['totalItems'] - $_COOKIE['item4'];
+      setcookie('totalItems', $temp, '/');
+      setcookie('item4', '0', 30, '/');
+    }
+    if(isset($_POST["item5"])) {
+      $temp = $_COOKIE['totalItems'] - $_COOKIE['item5'];
+      setcookie('totalItems', $temp, '/');
+      setcookie('item5', '0', 30, '/');
+    }
+    if(isset($_POST["item6"])) {
+      $temp = $_COOKIE['totalItems'] - $_COOKIE['item6'];
+      setcookie('totalItems', $temp, '/');
+      setcookie('item6', '0', 30, '/');
+    }
+    if(isset($_POST["item7"])) {
+      $temp = $_COOKIE['totalItems'] - $_COOKIE['item7'];
+      setcookie('totalItems', $temp, '/');
+      setcookie('item7', '0', 30, '/');
+    }
+    header("Location: ./cart.php");
+  }
   else {
     require_once ("./home.php");
   }

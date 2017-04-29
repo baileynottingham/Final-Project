@@ -495,6 +495,7 @@ if (typeof(Cookie) === "undefined") {
 })();
 
 window.onload = function(){
+    totalItemsInCart();
     $("soccerButton").onclick = incrementItem1;
     $("basketballButton").onclick = incrementItem2;
     $("footballButton").onclick = incrementItem3;
@@ -502,7 +503,6 @@ window.onload = function(){
     $("hockeyButton").onclick = incrementItem5;
     $("tennisButton").onclick = incrementItem6;
     $("baseballButton").onclick = incrementItem7;
-    totalItemsInCart();
 }
 
 function incrementItem1() {

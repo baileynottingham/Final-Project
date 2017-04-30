@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Checkout</title>
+  <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
   <h1>Checkout</h1>
   <form>
-    <h2>Enter your shipping address</h2>
+    <h3>Enter your shipping address</h3>
     Full Name: <input type="text" />
     <br />
     Address: <input type="text" />
@@ -73,6 +74,58 @@
 </select>
   <br />
   Phone Number: <input type="text"/>
+  <h3>Payment Information</h3>
+  <input type="radio" name="ccard" value="visa"/> <img id="visaIMG" src="visa.png" alt="Visa">
+  <input type="radio" name="ccard" value="mastercard"/> <img id="mastercardIMG" src="mastercard.JPEG" alt="Mastercard">
+  <input type="radio" name="ccard" value="american"/> <img id="americanexpressIMG" src="americanexpress.png" alt="American Express">
+  <input type="radio" name="ccard" value="discover"/> <img id="discoverIMG" src="discover.jpg" alt="Discover">
+  <br />
+  <input type="text" placeholder="Card Number"/>
+  <input type="text" placeholder="Security Code"/>
+  <br />
+  <input type="text" placeholder="Name on Card"/>
+  <br />
+  Expires:
+  <select>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+  <select>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+    <option value="2027">2027</option>
+    <option value="2028">2028</option>
+    <option value="2029">2029</option>
+    <option value="2030">2030</option>
+    <option value="2031">2031</option>
+    <option value="2032">2032</option>
+  </select>
+  <br />
+  <h3>Order Summary</h3>
+  <p>Items: $<?=number_format($_POST['totalPrice'], 2)?></p>
+  <p>Shipping and Handling: $5.99</p>
+  <p>Order Total: <?=number_format($_POST['totalPrice'] + 5.99, 2)?>
+  <br />
+  <br />
+  <input type="submit" value="Place your order"/>
   </form>
 </body>
 </html>

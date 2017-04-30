@@ -5,6 +5,25 @@
 #incorrectPassword {
   color: red;
 }
+#visaIMG {
+  height: 19px;
+  width: 50px;
+}
+
+#mastercardIMG {
+  height: 19px;
+  width: 50px;
+}
+
+#americanexpressIMG {
+  height: 40px;
+  width: 40px;
+}
+
+#discoverIMG {
+  height: 19px;
+  width: 50px;
+}
 
 img {
   width: 250px;

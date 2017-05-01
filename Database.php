@@ -16,6 +16,11 @@
           exit();
       }
     }
+    public function purchaseList(){
+      $data = $this->DB->prepare("SELECT firstName, lastName, email, item1, item2, item3, item4, item5, item6, item7 FROM accounts JOIN purchases ON id = userId");
+      $data->execute();
+      return $data->fetchAll( PDO::FETCH_ASSOC );
+    }
     public function addPurchase($email, $item1, $item2, $item3, $item4, $item5, $item6, $item7) {
       $data = $this->DB->prepare("SELECT * FROM accounts WHERE email = '$email'");
       $data->execute();

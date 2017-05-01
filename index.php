@@ -18,7 +18,11 @@
       $_SESSION['firstName'] = $myDatabaseFunctions->firstName($_POST['email']);
       $_SESSION['lastName'] = $myDatabaseFunctions->lastName($_POST['email']);
       $_SESSION['email'] = $_POST['email'];
-      header("Location: ./index.php");
+      if ($_SESSION['email'] == "admin"){
+        header("Location: ./purchases.php");
+      }else{
+        header("Location: ./index.php");
+      }
     }
     else {
       session_start();

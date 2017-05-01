@@ -1,5 +1,5 @@
 <?php
-//print_r($_COOKIE);
+session_start();
  ?>
 <!DOCTYPE html>
 <html>

@@ -71,6 +71,7 @@
     header("Location: ./cart.php");
   }
   else if(isset($_POST["purchase"])) {
+    session_start();
     if(isset($_COOKIE["item1"])) {
       $temp = (int)$_COOKIE['totalItems'] - (int)$_COOKIE['item1'];
       setcookie('totalItems', $temp,'/');

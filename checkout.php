@@ -8,18 +8,20 @@
   <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+  <div class="header">
   <h1>Checkout</h1>
+  </div>
   <form action="index.php" method="POST">
     <h3>Enter your shipping address</h3>
-    Full Name: <input type="text" />
+    Full Name: <input type="text" required="required"/>
     <br />
-    Address: <input type="text" />
+    Address: <input type="text" required="required"/>
     <br />
-    City: <input type="text" />
+    City: <input type="text" required="required"/>
     <br />
-    State: <input type="text" />
+    State: <input type="text" required="required" />
     <br />
-    ZIP: <input type="text" />
+    ZIP: <input type="text" required="required" />
     <br />
     State:
     <select>
@@ -76,17 +78,17 @@
 	<option value="WY">Wyoming</option>
 </select>
   <br />
-  Phone Number: <input type="text"/>
+  Phone Number: <input type="text" required="required"/>
   <h3>Payment Information</h3>
-  <input type="radio" name="ccard" value="visa"/> <img id="visaIMG" src="visa.png" alt="Visa">
+  <input type="radio" name="ccard" value="visa" checked="checked"/> <img id="visaIMG" src="visa.png" alt="Visa">
   <input type="radio" name="ccard" value="mastercard"/> <img id="mastercardIMG" src="mastercard.JPEG" alt="Mastercard">
   <input type="radio" name="ccard" value="american"/> <img id="americanexpressIMG" src="americanexpress.png" alt="American Express">
   <input type="radio" name="ccard" value="discover"/> <img id="discoverIMG" src="discover.jpg" alt="Discover">
   <br />
-  <input type="text" placeholder="Card Number"/>
-  <input type="text" placeholder="Security Code"/>
+  <input type="text" placeholder="Card Number" required="required"/>
+  <input type="text" placeholder="Security Code" required="required" />
   <br />
-  <input type="text" placeholder="Name on Card"/>
+  <input type="text" placeholder="Name on Card" required="required"/>
   <br />
   Expires:
   <select>
@@ -130,6 +132,9 @@
   <br />
   <input type="hidden" name="purchase"/>
   <input type="submit" value="Place your order"/>
+  </form>
+  <form action="index.php">
+    <input type="submit" value="Return Shopping"/>
   </form>
 </body>
 </html>

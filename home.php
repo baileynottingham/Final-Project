@@ -57,10 +57,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="soccerButton">Add to Cart!</button>
+      <button class="cartButtons" id="soccerButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="soccerButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons"disabled="disbaled" id="soccerButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       </div>
@@ -81,10 +81,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="basketballButton">Add to Cart!</button>
+      <button class="cartButtons" id="basketballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="basketballButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons" disabled="disbaled" id="basketballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       </div>
@@ -105,10 +105,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="footballButton">Add to Cart!</button>
+      <button class="cartButtons" id="footballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="footballButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons" disabled="disbaled" id="footballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       </div>
@@ -129,10 +129,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="golfballButton">Add to Cart!</button>
+      <button class="cartButtons" id="golfballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="golfballButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons" disabled="disbaled" id="golfballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       </div>
@@ -153,10 +153,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="hockeyButton">Add to Cart!</button>
+      <button class="cartButtons" id="hockeyButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="hockeyButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons" disabled="disbaled" id="hockeyButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       </div>
@@ -177,10 +177,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="tennisButton">Add to Cart!</button>
+      <button class="cartButtons" id="tennisButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="tennisButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons" disabled="disbaled" id="tennisButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
       </div>
@@ -201,10 +201,10 @@
         <option value="10">10</option>
       </select>
       <?php if($check == 1) { ?>
-      <button id="baseballButton">Add to Cart!</button>
+      <button class="cartButtons" id="baseballButton">Add to Cart!</button>
       <?php }
       else { ?>
-      <button disabled="disbaled" id="baseballButton">Sign in to start adding items to your cart!</button>
+      <button class="cartButtons" disabled="disbaled" id="baseballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       </div>
       <div id="footer">

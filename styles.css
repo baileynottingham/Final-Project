@@ -31,19 +31,26 @@ body {
 img {
   width: 250px;
   height: 250px;
+  margin: auto;
 }
 .item {
+  text-align: center;
+  border-style: ridge;
+  border-radius: 25px;
+  border-color: gray;
   min-width: 20%;
   float: left;
   margin-bottom: 20px;
-  margin-right: 2.5%;
-  margin-left: 2.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 1.25%;
 }
 
 #footer{
   background-color: #5cd65c;
   text-align: center;
   clear: both;
+  height: 50px;
 }
 
 .header {

@@ -5,12 +5,11 @@ session_start();
 <html>
 <head>
   <title>Shopping Cart</title>
-  <script type="text/javascript" src="Cookie.js"></script>
   <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
-<body>
+<body id="cartBody">
   <form action="index.php"/>
-    <input type="submit" value="Back to Shopping" />
+    <input class="cartButtons" type="submit" value="Back to Shopping" />
   </form>
   <?php
     //  echo $_COOKIE["totalItems"];
@@ -19,88 +18,147 @@ session_start();
       && isset($_COOKIE["item5"]) == false && isset($_COOKIE["item6"]) == false
       && isset($_COOKIE["item7"]) == false) {
   ?>
-  <h3>Your Shopping Cart is empty.</h3>
+  <h3 id="emptyCart">Your Shopping Cart is empty.</h3>
+  <img src="homealone.png" alt="oh no!" id="homealone">
+  <p id="emptycarttext">Don't worry! You can hit the "Back to Shopping" button to go back and start adding items to your cart.</p>
   <?php }
   else {
   ?>
+  <div id="cartTitle">
   <h1>Shopping Cart</h1>
-  <hr />
+  </div>
   <?php if(isset($_COOKIE["item1"]) && $_COOKIE["item1"] > 0) { ?>
-  <h4> Nike Soccer Ball</h4>
-  <img src="soccer.JPEG" alt="Soccer Ball">
-  <p>Quantity: <?= $_COOKIE["item1"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart"> Nike Soccer Ball</h4>
+  <img src="soccer.JPEG" alt="Soccer Ball" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$19.95</span></p>
+  </div>
+  <div class="quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item1"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item1" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons" type="submit" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php if(isset($_COOKIE["item2"]) && $_COOKIE["item2"] > 0) { ?>
-  <h4> Nike Elite Basketball</h4>
-  <img src="basketball.JPEG" alt="Basketball">
-  <p>Quantity: <?= $_COOKIE["item2"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart"> Nike Elite Basketball</h4>
+  <img src="basketball.JPEG" alt="Basketball" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$25.00</span></p>
+  </div>
+  <div class="quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item2"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item2" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons" type="submit" id="removeButton" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php if(isset($_COOKIE["item3"]) && $_COOKIE["item3"] > 0) { ?>
-  <h4> Wilson NFL Football</h4>
-  <img src="football.png" alt="Football">
-  <p>Quantity: <?= $_COOKIE["item3"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart"> Wilson NFL Football</h4>
+  <img src="football.png" alt="Football" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$21.25</span></p>
+  </div>
+  <div class"quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item3"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item3" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons" type="submit" id="removeButton" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php if(isset($_COOKIE["item4"]) && $_COOKIE["item4"] > 0) { ?>
-  <h4>Titleist Golfball</h4>
-  <img src="golfball.JPEG" alt="Golf Ball">
-  <p>Quantity: <?= $_COOKIE["item4"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart">Titleist Golfball</h4>
+  <img src="golfball.JPEG" alt="Golf Ball" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$3.50</span></p>
+  </div>
+  <div class"quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item4"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item4" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons" type="submit" id="removeButton" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php if(isset($_COOKIE["item5"]) && $_COOKIE["item5"] > 0) { ?>
-  <h4>Hockey Puck</h4>
-  <img src="hockey.JPEG" alt="Hockey Puck">
-  <p>Quantity: <?= $_COOKIE["item5"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart">Hockey Puck</h4>
+  <img src="hockey.JPEG" alt="Hockey Puck" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$12.75</span></p>
+  </div>
+  <div class"quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item5"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item5" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons" type="submit" id="removeButton" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php if(isset($_COOKIE["item6"]) && $_COOKIE["item6"] > 0) { ?>
-  <h4>Wilson Tennis Ball</h4>
-  <img src="tennis.JPEG" alt="Tennis Ball">
-  <p>Quantity: <?= $_COOKIE["item6"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart">Wilson Tennis Ball</h4>
+  <img src="tennis.JPEG" alt="Tennis Ball" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$3.00</span></p>
+  </div>
+  <div class"quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item6"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item6" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons"  type="submit" id="removeButton" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php if(isset($_COOKIE["item7"]) && $_COOKIE["item7"] > 0) { ?>
-  <h4>Wilson Little League Baseball</h4>
-  <img src="baseball.JPEG" alt="Baseball">
-  <p>Quantity: <?= $_COOKIE["item7"] ?></p>
-  <form action="index.php" method="post">
+  <div class="itemCart">
+  <h4 class="titleCart">Wilson Little League Baseball</h4>
+  <img src="baseball.JPEG" alt="Baseball" class="cartImages">
+  <div class="pricesAndQuantity">
+  <div class="priceTag">
+  <p class="priceP">Price: <span class="nums">$4.10</span></p>
+  </div>
+  <div class"quantity">
+  <p class="quantityP">Quantity: <span class="nums"><?= $_COOKIE["item7"] ?></span></p>
+  </div>
+  </div>
+  <form action="index.php" method="post" class="removeCart">
     <input type="hidden" name="remove" value="true"/>
     <input type="hidden" name="item7" value="true"/>
-    <input type="submit" id="removeButton" value="Remove From Cart"/>
+    <input class="cartButtons"  type="submit" id="removeButton" value="Remove From Cart"/>
   </form>
-  <hr />
+  </div>
   <?php } ?>
   <?php
   $total = 0;
@@ -126,10 +184,10 @@ session_start();
     $total = $total + ($_COOKIE["item7"] * 4.10);
   }
   ?>
-  <p>Subtotal (<?=$_COOKIE["totalItems"]?> items): $<?=number_format($total, 2)?></p>
+  <p id="subtotal">Subtotal (<?=$_COOKIE["totalItems"]?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>
   <form action="checkout.php" method="post">
     <input type="hidden" name="totalPrice" value="<?=$total?>"/>
-    <input type="submit" value="Check Out!" />
+    <input class="cartButtons" type="submit" value="Check Out!" />
   </form>
   <?php } ?>
 </body>

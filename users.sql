@@ -1,4 +1,4 @@
--- MySQL dump 10.16  Distrib 10.1.21-MariaDB, for osx10.6 (i386)
+-- MySQL dump 10.16  Distrib 10.1.21-MariaDB, for Win32 (AMD64)
 --
 -- Host: localhost    Database: localhost
 -- ------------------------------------------------------
@@ -37,7 +37,7 @@ CREATE TABLE `accounts` (
   `password` varchar(255) DEFAULT NULL,
   `id` mediumint(9) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,8 +46,39 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-INSERT INTO `accounts` VALUES ('baileynottingham@email.arizona.edu','Bailey','Nottingham','$2y$10$W5Ne68PfGKNrSGDHQ0p/kOpxq/sp4jiydMazbvdmlqU2QtBlB66UC',7);
+INSERT INTO `accounts` VALUES ('baileynottingham@email.arizona.edu','Bailey','Nottingham','$2y$10$W5Ne68PfGKNrSGDHQ0p/kOpxq/sp4jiydMazbvdmlqU2QtBlB66UC',7),('scottperry@email.arizona.edu','Scott','Perry','$2y$10$MJysQOoSrLdXF2Erz7BTsuG2bbM2A3UgLkD/iUJUzo.zc13Hpa5ce',17);
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `purchases`
+--
+
+DROP TABLE IF EXISTS `purchases`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `purchases` (
+  `purchaseId` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) DEFAULT NULL,
+  `item1` int(11) DEFAULT NULL,
+  `item2` int(11) DEFAULT NULL,
+  `item3` int(11) DEFAULT NULL,
+  `item4` int(11) DEFAULT NULL,
+  `item5` int(11) DEFAULT NULL,
+  `item6` int(11) DEFAULT NULL,
+  `item7` int(11) DEFAULT NULL,
+  PRIMARY KEY (`purchaseId`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `purchases`
+--
+
+LOCK TABLES `purchases` WRITE;
+/*!40000 ALTER TABLE `purchases` DISABLE KEYS */;
+INSERT INTO `purchases` VALUES (1,0,0,0,0,0,0,0,0),(2,0,0,0,0,0,0,0,0),(3,0,0,0,0,0,0,0,0),(4,0,0,0,0,0,0,0,0),(5,0,1,4,0,0,0,0,0),(6,0,1,0,0,0,0,0,0),(7,0,2,0,0,0,0,0,0),(8,0,1,0,0,0,0,0,0),(9,0,0,8,0,0,0,0,0);
+/*!40000 ALTER TABLE `purchases` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -59,4 +90,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-23 23:12:44
+-- Dump completed on 2017-04-30 20:26:16

@@ -11,7 +11,9 @@
     <script type="text/javascript" src="prototype.js"></script>
   <head>
   <body>
+      <div class="header">
       <h1>We Got Balls! Sporting Goods</h1>
+      </div>
       <?php
         $check = 0;
         if(isset($_SESSION['firstName']) && isset($_SESSION['lastName']) && isset($_SESSION['email'])) {
@@ -38,6 +40,7 @@
       ?>
       <br />
       <br />
+      <div class="item">
       <img src="soccer.JPEG" alt="Soccer Ball">
       <p>Price $19.95</p>
       Quantity:
@@ -60,6 +63,8 @@
       <button disabled="disbaled" id="soccerButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
+      </div>
+      <div class="item">
       <img src="basketball.JPEG" alt="Basketball">
       <p>Price $25.00</p>
       Quantity:
@@ -82,6 +87,8 @@
       <button disabled="disbaled" id="basketballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
+      </div>
+      <div class="item">
       <img src="football.png" alt="Football">
       <p>Price $21.25</p>
       Quantity:
@@ -104,6 +111,8 @@
       <button disabled="disbaled" id="footballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
+      </div>
+      <div class="item">
       <img src="golfball.JPEG" alt="Golf Ball">
       <p>Price $3.50</p>
       Quantity:
@@ -126,6 +135,8 @@
       <button disabled="disbaled" id="golfballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
+      </div>
+      <div class="item">
       <img src="hockey.JPEG" alt="Hockey Puck">
       <p>Price $12.75</p>
       Quantity:
@@ -148,6 +159,8 @@
       <button disabled="disbaled" id="hockeyButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
+      </div>
+      <div class="item">
       <img src="tennis.JPEG" alt="Tennis Ball">
       <p>Price $3.00</p>
       Quantity:
@@ -170,6 +183,8 @@
       <button disabled="disbaled" id="tennisButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
       <br />
+      </div>
+      <div class="item">
       <img src="baseball.JPEG" alt="Baseball">
       <p>Price $4.10</p>
       Quantity:
@@ -191,7 +206,10 @@
       else { ?>
       <button disabled="disbaled" id="baseballButton">Sign in to start adding items to your cart!</button>
       <?php } ?>
+      </div>
+      <div id="footer">
       <hr />
       <p> Copyright &copy; 2017 Bailey Nottingham and Scott Perry.</p>
+      </div>
   </body>
 </html>

@@ -41,14 +41,15 @@ img {
 }
 
 #footer{
-  background-color: lightgreen;
+  background-color: #5cd65c;
   text-align: center;
   clear: both;
 }
 
-.header{
+.header {
   padding: 1px;
   background-color: #5cd65c;
+  text-align: center;
 }
 
 @font-face {
@@ -64,8 +65,10 @@ img {
 h1 {
   font-family: sportsFont;
   font-size: 50px;
-  background-color: Azure;
+  background-color: white;
   color: black;
+  padding: 10px;
+  text-align: center;
 }
 
 #logo {
@@ -87,4 +90,96 @@ h1 {
   padding: 10px;
   margin-top: 5px;
   border-radius: 20px;
+}
+
+.itemCart {
+  font-family: sportsFont;
+  font-size: 30px;
+  border: solid;
+  background-color: white
+}
+
+.nums {
+  font-family: monospace;
+}
+
+.cartImages {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.priceTag {
+  margin: 0;
+
+}
+.titleCart {
+  margin: 0;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.quantity {
+  margin: 0;
+}
+
+.quantityP {
+  margin: 0;
+}
+
+.priceP {
+  margin: 0;
+  padding-bottom: 10px;
+}
+.pricesAndQuantity {
+  float: right;
+  padding-right: 50px;
+}
+.removeCart {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-family: sportsFont;
+}
+.removeItemButton {
+  font-family: sportsFont;
+}
+#cartBody {
+  background-color: #5cd65c;
+}
+#cartTitle {
+    text-align: center;
+    margin: 0;
+}
+
+.cartButtons {
+  background-color: black;
+  color: white;
+  font-family: sportsFont;
+  font-size: 12px;
+  padding: 6px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+#subtotal {
+  font-family: sportsFont;
+  font-size: 30px;
+  margin: 5px;
+}
+
+#emptyCart {
+  font-family: sportsFont;
+  font-size: 50px;
+  margin: 15px;
+  text-align: center;
+}
+#homealone {
+  display: block;
+  margin: 0 auto;
+}
+#emptycarttext {
+  font-family: sportsFont;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
 }

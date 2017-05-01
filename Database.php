@@ -16,6 +16,14 @@
           exit();
       }
     }
+    public function addPurchase($email, $item1, $item2, $item3, $item4, $item5, $item6, $item7) {
+      $data = $this->DB->prepare("SELECT * FROM accounts WHERE email = '$email'");
+      $data->execute();
+      $data = $data->fetchAll( PDO::FETCH_ASSOC );
+      $id = $data[0]['id'];
+      $data = $this->DB->prepare("INSERT INTO purchases VALUES ('NULL', '$id', '$item1', '$item2', '$item3', '$item4', '$item5', '$item6', '$item7')");
+      $data->execute();
+    }
     public function addUser($firstName, $lastName, $email, $password) {
       $hashed_pwd = password_hash($password, PASSWORD_DEFAULT);
       $data = $this->DB->prepare("INSERT INTO accounts (email, firstName, lastName, password) VALUES ('$email', '$firstName', '$lastName', '$hashed_pwd')");

@@ -6,7 +6,7 @@
 </head>
 <body>
   <h1>Checkout</h1>
-  <form>
+  <form action="index.php" method="POST">
     <h3>Enter your shipping address</h3>
     Full Name: <input type="text" />
     <br />
@@ -125,6 +125,7 @@
   <p>Order Total: <?=number_format($_POST['totalPrice'] + 5.99, 2)?>
   <br />
   <br />
+  <input type="hidden" name="purchase"/>
   <input type="submit" value="Place your order"/>
   </form>
 </body>

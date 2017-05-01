@@ -110,6 +110,19 @@ h1 {
   font-family: monospace;
 }
 
+.report {
+  font-family: monospace;
+  font-size: 12pt;
+  border-bottom-width: 4px;
+  border-bottom-style: dotted;
+  border-bottom-color:  gray;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding-bottom: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .cartImages {
   width: 100px;
   height: 100px;

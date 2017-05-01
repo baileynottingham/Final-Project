@@ -19,22 +19,22 @@
         if(isset($_SESSION['firstName']) && isset($_SESSION['lastName']) && isset($_SESSION['email'])) {
           $check = 1;
       ?>
-      <p>Welcome back, <?= $_SESSION["firstName"] ?> <?= $_SESSION["lastName"] ?> </p>
+      <p class="welcome">Welcome back, <?= $_SESSION["firstName"] ?> <?= $_SESSION["lastName"] ?> </p>
       <form id="logout" action="index.php" method="post"/>
         <input type="hidden" name="logout" value="true" />
-        <input type="submit" value="Log Out" />
+        <input class="homeButtons" type="submit" value="Log Out" />
       </form>
       <form id="cart" action="cart.php" method="post"/>
         <input type="hidden" name="cart" value="true" />
-        <input type="submit" value="View Shopping Cart" />
+        <input class="homeButtons" type="submit" value="View Shopping Cart" />
       </form>
       <p id="total">Total Items in Cart: </p>
       <?php
         }
         else {
        ?>
-        <p>Sign in or register to start adding items to your cart</p>
-        <button><a href="user.php">Log In or Register</a></button>
+        <p class="welcome">Sign in or register to start adding items to your cart</p>
+        <button class="homeButtons"><a href="user.php">Log In or Register</a></button>
       <?php
         }
       ?>

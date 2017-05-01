@@ -5,6 +5,9 @@
 #incorrectPassword {
   color: red;
 }
+body {
+  margin: 0;
+}
 #visaIMG {
   height: 19px;
   width: 50px;
@@ -29,10 +32,6 @@ img {
   width: 250px;
   height: 250px;
 }
-
-body{
-  margin: 0;
-}
 .item {
   min-width: 20%;
   float: left;
@@ -42,17 +41,50 @@ body{
 }
 
 #footer{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 50px;
   background-color: lightgreen;
   text-align: center;
-  /*clear: both;*/
+  clear: both;
 }
 
 .header{
   padding: 1px;
   background-color: #5cd65c;
+}
+
+@font-face {
+  font-family: sportsFont;
+  src: url('SFSportsNight.ttf');
+}
+
+@font-face {
+  font-family: sportsFont2;
+  src: url('TeamSpiritNF.ttf');
+}
+
+h1 {
+  font-family: sportsFont;
+  font-size: 50px;
+  background-color: Azure;
+  color: black;
+}
+
+#logo {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+.welcome {
+  font-family: sportsFont;
+  font-size: 30px;
+}
+
+.homeButtons {
+  background-color: black;
+  color: white;
+  font-family: sportsFont;
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
 }

@@ -34,6 +34,13 @@
     session_start();
     session_destroy();
     session_regenerate_id(TRUE);
+    setcookie("item1", "", -1, '/');
+    setcookie("item2", "", -1, '/');
+    setcookie("item3", "", -1, '/');
+    setcookie("item4", "", -1, '/');
+    setcookie("item5", "", -1, '/');
+    setcookie("item6", "", -1, '/');
+    setcookie("item7", "", -1, '/');
     header("Location: ./index.php");
   }
   else if(isset($_POST["remove"])) {

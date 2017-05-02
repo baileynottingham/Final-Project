@@ -239,3 +239,30 @@ h1 {
 #total {
   font-family: sportsFont;
 }
+#login {
+  font-family: sportsFont, sans-serif;
+  text-align: right;
+  margin: 0 auto;
+  width: 50%;
+  padding-right: 85px;
+  padding-top: 50px;
+}
+#login input {
+  margin-top: 10px;
+}
+#registerStyle {
+  font-family: "sportsFont", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+#newAccount {
+  font-family: "sportsFont", sans-serif;
+  text-align: right;
+  margin: 0 auto;
+    padding-right: 55px;
+  width: 50%;
+  padding-top: 50px;
+}

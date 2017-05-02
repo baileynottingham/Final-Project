@@ -8,7 +8,10 @@
   <script type="text/javascript" src="./events.js"> </script>
 </head>
 <body>
+  <div class="header">
   <h1>Register</h1>
+  </div>
+  <div id="newAccount">
   <form id="newAccount" action="index.php" method="post">
     First Name: <input type="text" name="firstName" required="required" />
     <br />
@@ -23,9 +26,10 @@
     <br />
     <br />
     <input type="hidden" name="newUser" />
-    <input id="submit" type="submit" />
+    <input id="submit" type="submit" value="Register" class="cartButtons"/>
     <br />
     <p id="status"></p>
   </form>
+  </div>
 </body>
 <html>

@@ -7,7 +7,6 @@
   <head>
     <title>Online Store</title>
     <link href="styles.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="Cookie.js"></script>
     <script type="text/javascript" src="prototype.js"></script>
   <head>
   <body>
@@ -19,6 +18,7 @@
         if(isset($_SESSION['firstName']) && isset($_SESSION['lastName']) && isset($_SESSION['email'])) {
           $check = 1;
       ?>
+      <script type="text/javascript" src="Cookie.js"></script>
       <p class="welcome">Welcome back, <?= $_SESSION["firstName"] ?> <?= $_SESSION["lastName"] ?> </p>
       <form id="logout" action="index.php" method="post"/>
         <input type="hidden" name="logout" value="true" />
@@ -33,14 +33,17 @@
         }
         else {
        ?>
-        <p class="welcome">Sign in or register to start adding items to your cart</p>
-        <button class="homeButtons"><a href="user.php">Log In or Register</a></button>
+      <p class="welcome">Sign in or register to start adding items to your cart</p>
+      <form action="user.php">
+        <input class="homeButtons" type="submit" value="Log In or Register"/>
+      </form>
       <?php
         }
       ?>
       <br />
       <br />
       <div class="item">
+      <p class="titles">Nike Soccer Ball</p>
       <img src="soccer.JPEG" alt="Soccer Ball">
       <p>Price $19.95</p>
       Quantity:
@@ -65,6 +68,7 @@
       <br />
       </div>
       <div class="item">
+      <p class="titles">Nike Elite Basketball</p>
       <img src="basketball.JPEG" alt="Basketball">
       <p>Price $25.00</p>
       Quantity:
@@ -89,6 +93,7 @@
       <br />
       </div>
       <div class="item">
+      <p class="titles">Wilson NFL Football</p>
       <img src="football.png" alt="Football">
       <p>Price $21.25</p>
       Quantity:
@@ -113,6 +118,7 @@
       <br />
       </div>
       <div class="item">
+      <p class="titles">Titleist Golfball</p>
       <img src="golfball.JPEG" alt="Golf Ball">
       <p>Price $3.50</p>
       Quantity:
@@ -137,6 +143,7 @@
       <br />
       </div>
       <div class="item">
+      <p class="titles">Hockey Puck</p>
       <img src="hockey.JPEG" alt="Hockey Puck">
       <p>Price $12.75</p>
       Quantity:
@@ -161,6 +168,7 @@
       <br />
       </div>
       <div class="item">
+      <p class="titles">Wilson Tennis Ball</p>
       <img src="tennis.JPEG" alt="Tennis Ball">
       <p>Price $3.00</p>
       Quantity:
@@ -185,6 +193,7 @@
       <br />
       </div>
       <div class="item">
+      <p class="titles">Wilson Little League Baseball</p>
       <img src="baseball.JPEG" alt="Baseball">
       <p>Price $4.10</p>
       Quantity:

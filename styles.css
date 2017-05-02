@@ -231,3 +231,10 @@ h1 {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.titles {
+  font-family: sportsFont;
+  font-size: 20px;
+}
+#total {
+  font-family: sportsFont;
+}

@@ -16,17 +16,13 @@
   </form>
   <div id="checkout">
   <div id="Shipping">
-  <form action="index.php" method="POST">
+  <form action="confirmation.php" method="POST">
     <h3>Enter your shipping address</h3>
     Full Name: <input type="text" required="required"/>
     <br />
     Address: <input type="text" required="required"/>
     <br />
     City: <input type="text" required="required"/>
-    <br />
-    State: <input type="text" required="required" />
-    <br />
-    ZIP: <input type="text" required="required" />
     <br />
     State:
     <select>
@@ -82,6 +78,8 @@
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
 </select>
+  <br />
+    ZIP: <input type="text" required="required" />
   <br />
   Phone Number: <input type="text" required="required"/>
 </div>
@@ -139,8 +137,7 @@
   <p>Order Total: $<?=number_format($_POST['totalPrice'] + 5.99, 2)?>
   <br />
   <br />
-  <input type="hidden" name="purchase"/>
-  <input type="submit" value="Place your order"/>
+  <input class="cartButtons" type="submit" value="Place your order"/>
   </form>
   </div>
   </div>

@@ -181,7 +181,7 @@ h1 {
   border-radius: 10px;
 }
 
-#subtotal {
+.subtotal {
   font-family: sportsFont;
   font-size: 30px;
   margin: 5px;

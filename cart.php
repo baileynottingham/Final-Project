@@ -162,29 +162,37 @@ session_start();
   <?php } ?>
   <?php
   $total = 0;
+  $totalNum = 0;
   if(isset($_COOKIE["item1"]) == true) {
     $total = $total + ($_COOKIE["item1"] * 19.95);
+    $totalNum = $totalNum + $_COOKIE["item1"];
   }
   if(isset($_COOKIE["item2"]) == true) {
     $total = $total + ($_COOKIE["item2"] * 25.00);
+    $totalNum = $totalNum + $_COOKIE["item2"];
   }
   if(isset($_COOKIE["item3"]) == true) {
     $total = $total + ($_COOKIE["item3"] * 21.25);
+    $totalNum = $totalNum + $_COOKIE["item3"];
   }
   if(isset($_COOKIE["item4"]) == true) {
     $total = $total + ($_COOKIE["item4"] * 3.50);
+    $totalNum = $totalNum + $_COOKIE["item4"];
   }
   if(isset($_COOKIE["item5"]) == true) {
     $total = $total + ($_COOKIE["item5"] * 12.75);
+    $totalNum = $totalNum + $_COOKIE["item5"];
   }
   if(isset($_COOKIE["item6"]) == true) {
     $total = $total + ($_COOKIE["item6"] * 3.00);
+    $totalNum = $totalNum + $_COOKIE["item6"];
   }
   if(isset($_COOKIE["item7"]) == true) {
     $total = $total + ($_COOKIE["item7"] * 4.10);
+    $totalNum = $totalNum + $_COOKIE["item7"];
   }
   ?>
-  <p class="subtotal">Subtotal (<?=$_COOKIE["totalItems"]?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>
+  <p class="subtotal">Subtotal (<?=$totalNum?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>
   <form action="checkout.php" method="post">
     <input type="hidden" name="totalPrice" value="<?=$total?>"/>
     <input class="cartButtons" type="submit" value="Check Out!" />

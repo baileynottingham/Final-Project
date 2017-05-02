@@ -177,6 +177,6 @@ session_start();
   $total = 0;
   $total = $total + ($item1 * 19.95) + ($item2 * 25.00) + ($item3 * 21.25) + ($item4 * 3.50) + ($item5 * 12.75) + ($item6 * 3.00) + ($item7 * 4.10);
   ?>
-  <p class="subtotal">Subtotal (<?=$totalItems?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>  
+  <p class="subtotal">Subtotal (<?=$totalItems?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>
 </body>
 </html>

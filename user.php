@@ -26,12 +26,15 @@
     session_regenerate_id(TRUE);
       }
      ?>
-  </div>
   </form>
+  </div>  
   <div id="registerStyle">
   <form id="register" action="register.php" method="post">
     <p> Not registered? Register here! </p>
     <input type="submit" value="Register" class="cartButtons"/>
+  </form>
+  <form action="index.php">
+    <input class="cartButtons" type="submit" value="Return Shopping"/>
   </form>
   </div>
 </body>

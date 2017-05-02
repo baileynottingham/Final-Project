@@ -184,7 +184,7 @@ session_start();
     $total = $total + ($_COOKIE["item7"] * 4.10);
   }
   ?>
-  <p id="subtotal">Subtotal (<?=$_COOKIE["totalItems"]?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>
+  <p class="subtotal">Subtotal (<?=$_COOKIE["totalItems"]?> items): <span class="nums">$<?=number_format($total, 2)?></span></p>
   <form action="checkout.php" method="post">
     <input type="hidden" name="totalPrice" value="<?=$total?>"/>
     <input class="cartButtons" type="submit" value="Check Out!" />

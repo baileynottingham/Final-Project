@@ -243,8 +243,8 @@ h1 {
   font-family: sportsFont, sans-serif;
   text-align: right;
   margin: 0 auto;
-  width: 50%;
-  padding-right: 85px;
+  max-width: 300px;
+
   padding-top: 50px;
 }
 #login input {
@@ -254,15 +254,13 @@ h1 {
   font-family: "sportsFont", sans-serif;
   text-align: center;
   margin: 0 auto;
-  width: 50%;
-  padding-right: 50px;
+  max-width: 300px;
   padding-top: 50px;
 }
 #newAccount {
   font-family: "sportsFont", sans-serif;
   text-align: right;
   margin: 0 auto;
-    padding-right: 55px;
-  width: 50%;
+  max-width: 290px;
   padding-top: 50px;
 }

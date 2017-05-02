@@ -30,6 +30,9 @@
     <br />
     <p id="status"></p>
   </form>
+  <form id="newAccount" action="index.php">
+    <input class="cartButtons" type="submit" value="Return Shopping"/>
+  </form>
   </div>
 </body>
 <html>

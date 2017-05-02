@@ -11,6 +11,11 @@
   <div class="header">
   <h1>Checkout</h1>
   </div>
+  <form action="index.php">
+    <input class="cartButtons" type="submit" value="Return Shopping"/>
+  </form>
+  <div id="checkout">
+  <div id="Shipping">
   <form action="index.php" method="POST">
     <h3>Enter your shipping address</h3>
     Full Name: <input type="text" required="required"/>
@@ -79,6 +84,8 @@
 </select>
   <br />
   Phone Number: <input type="text" required="required"/>
+</div>
+  <div id="Payment">
   <h3>Payment Information</h3>
   <input type="radio" name="ccard" value="visa" checked="checked"/> <img id="visaIMG" src="visa.png" alt="Visa">
   <input type="radio" name="ccard" value="mastercard"/> <img id="mastercardIMG" src="mastercard.JPEG" alt="Mastercard">
@@ -124,17 +131,18 @@
     <option value="2032">2032</option>
   </select>
   <br />
+  </div>
+  <div id="Summary">
   <h3>Order Summary</h3>
   <p>Items: $<?=number_format($_POST['totalPrice'], 2)?></p>
   <p>Shipping and Handling: $5.99</p>
-  <p>Order Total: <?=number_format($_POST['totalPrice'] + 5.99, 2)?>
+  <p>Order Total: $<?=number_format($_POST['totalPrice'] + 5.99, 2)?>
   <br />
   <br />
   <input type="hidden" name="purchase"/>
   <input type="submit" value="Place your order"/>
   </form>
-  <form action="index.php">
-    <input type="submit" value="Return Shopping"/>
-  </form>
+  </div>
+  </div>
 </body>
 </html>

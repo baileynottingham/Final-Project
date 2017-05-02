@@ -190,3 +190,31 @@ h1 {
   text-align: center;
   padding-top: 10px;
 }
+#checkout {
+  padding-top: 50px;
+}
+#Shipping {
+  font-family: "Helvetica", sans-serif;
+  float: left;
+  margin-right: 6em;
+  text-align: right;
+  width: 300px;
+  margin-left: 115px;
+}
+#Summary {
+  float: left;
+  font-family: "Helvetica", sans-serif;
+  text-align: left;
+  width: 300px;
+}
+#Payment {
+  font-family: "Helvetica", sans-serif;
+  float: left;
+  margin-right: 6em;
+  text-align: left;
+  width: 300px;
+}
+#checkout input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
